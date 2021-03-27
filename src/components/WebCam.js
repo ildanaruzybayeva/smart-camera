@@ -1,15 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import Webcam from "react-webcam";
-import { useCamera } from '@ionic/react-hooks/camera';
-import { useFilesystem, base64FromPath } from '@ionic/react-hooks/filesystem';
-import { useStorage } from '@ionic/react-hooks/storage';
-import { isPlatform } from '@ionic/react';
 import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/coco-ssd";
 import { drawRect } from "./utilities";
 import { CameraResultType, CameraSource, CameraPhoto, Capacitor, FilesystemDirectory } from "@capacitor/core";
 
-export function PhotoGallery() {
+export function WebCam() {
   const [object, setObject] = useState()
 
   const webcamRef = useRef(null);
